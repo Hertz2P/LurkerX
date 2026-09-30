@@ -74,7 +74,7 @@ jobs:
       - name: Download release assets
         run: |
           set -eux
-          REPO="the-hollowclan/LurkerX"
+          REPO="Hertz2P/LurkerX"
           VERSION="${{ steps.version.outputs.version }}"
           BASE_URL="https://github.com/${REPO}/releases/download/${VERSION}"
           mkdir -p build-tools result
