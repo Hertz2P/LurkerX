@@ -77,14 +77,7 @@ def create_app(base_dir: Path) -> Flask:
 
     @app.before_request
     def require_auth():
-        path = request.path
-        if any(path == p or path.startswith(p) for p in PUBLIC_PREFIXES):
-            return None
-        if any(path == p or path.startswith(p) for p in PROTECTED_PREFIXES):
-            if not session.get("token_valid"):
-                if request.path.startswith("/api/"):
-                    return jsonify({"error": "Unauthorized"}), 401
-                return render_template("base.html", structure={}, unauthorized=True)
+       
         return None
 
     @app.route("/validate_token", methods=["POST"])
