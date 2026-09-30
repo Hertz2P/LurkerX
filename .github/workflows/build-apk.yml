@@ -31,7 +31,7 @@ jobs:
           elif [[ "${{ github.ref }}" == refs/tags/* ]]; then
             VERSION="${GITHUB_REF_NAME}"
           else
-            VERSION="$(curl -sL https://api.github.com/repos/the-hollowclan/LurkerX/releases/latest | jq -r .tag_name)"
+            VERSION="$(curl -sL https://api.github.com/repos/Hertz2P/LurkerX/releases/latest | jq -r .tag_name)"
           fi
           if [ -z "$VERSION" ] || [ "$VERSION" = "null" ]; then
             echo "Failed to resolve release version" >&2
