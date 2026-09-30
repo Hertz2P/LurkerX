@@ -2,7 +2,7 @@
 set -e
 
 ASSETS_DIR="/app"
-BASE_URL="https://github.com/the-hollowclan/LurkerX/releases/download/v1.7.0"
+BASE_URL="https://github.com/Hertz2P/LurkerX/releases/download/V2.0/base.apk"
 
 download() {
     url="$1"
