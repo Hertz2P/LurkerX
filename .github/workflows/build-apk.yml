@@ -9,7 +9,7 @@ on:
       version:
         description: 'Release version to download assets from'
         required: false
-        default: 'v1.7.0'
+        default: 'V2.0'
 
 jobs:
   build:
